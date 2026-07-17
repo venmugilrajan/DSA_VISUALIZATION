@@ -1,0 +1,29 @@
+# Node dependencies
+**/node_modules/
+
+# Production build outputs
+**/dist/
+**/dist-ssr/
+
+# Environment configurations (API keys & secrets)
+backend/.env
+**/.env
+**/.env.local
+**/.env.*.local
+.env
+
+# Logs
+**/logs/
+**/*.log
+**/npm-debug.log*
+
+# Editor and System files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

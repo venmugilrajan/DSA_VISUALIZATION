@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light Theme (Default) */
+  --bg-base: #F3F4F6;
+  --bg-surface: #FFFFFF;
+  --bg-elevated: #E5E7EB;
+  --text-primary: #111827;     /* Darker black */
+  --text-secondary: #374151;   /* Dark gray (slate 700) for high contrast */
+  --accent-signal: #0D9488;    /* Stronger teal */
+  --accent-compare: #B45309;   /* Stronger amber */
+  --accent-danger: #DC2626;    /* Stronger red */
+  --border-hairline: #D1D5DB;  /* Darker border line */
+}
+
+.dark {
+  /* Dark Theme */
+  --bg-base: #0B0E14;
+  --bg-surface: #12161F;
+  --bg-elevated: #1A2030;
+  --text-primary: #E8EAF0;
+  --text-secondary: #8B92A8;
+  --accent-signal: #4FD1C5;   /* Glowing Teal */
+  --accent-compare: #F2C94C;  /* Amber */
+  --accent-danger: #EF6461;   /* Red */
+  --border-hairline: #232A3B;
+}
+
+@layer base {
+  body {
+    @apply antialiased;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+.font-display {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(22, 24, 34, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.4);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.7);
+}
+
+/* D3 layout transitions styles */
+.node-circle {
+  transition: fill 0.3s ease, stroke 0.3s ease;
+}
+.edge-line {
+  transition: stroke 0.3s ease, stroke-width 0.3s ease;
+}
